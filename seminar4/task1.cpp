@@ -50,6 +50,10 @@ int main(int argc, char *argv[]) {
     vec2 = parcing(std::move(in));
     std::cout << "count: " << vec1.size() << " | " << vec2.size() << std::endl;
 
+
+
+    std::cout << "\t get last element -> " << *(std::end(vec1).operator--()) << std::endl;;
+
     std::cout << "Numbers for vec1:\n";
     for (int vec11: vec1) {
         // int counter = countOfNumber(vec1, vec11);
