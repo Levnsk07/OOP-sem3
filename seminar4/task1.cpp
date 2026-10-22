@@ -55,8 +55,8 @@ int main(int argc, char *argv[]) {
 
     std::cout << "Numbers for vec1:\n";
     for (int vec11: vec1) {
-        // int counter = countOfNumber(vec1, vec11);
-        int counter = std::count(vec1.begin(), vec1.end(), vec11);
+        int counter = countOfNumber(vec1, vec11);
+        // int counter = std::count(vec1.begin(), vec1.end(), vec11);
         std::cout << vec11 << ":" << counter << " | ";
     }
 
