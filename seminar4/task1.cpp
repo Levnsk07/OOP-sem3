@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
 
 
 
-    std::cout << "\t get last element -> " << *(std::end(vec1).operator--()) << std::endl;;
+    std::cout << "\t get last element -> " << *(std::end(vec1).operator--()) << std::endl; // show last element
 
     std::cout << "Numbers for vec1:\n";
     for (int vec11: vec1) {
