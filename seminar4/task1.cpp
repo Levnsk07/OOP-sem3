@@ -51,8 +51,7 @@ int main(int argc, char *argv[]) {
     std::cout << "count: " << vec1.size() << " | " << vec2.size() << std::endl;
 
 
-
-    std::cout << "\t get last element -> " << *(std::end(vec1).operator--()) << std::endl; // show last element
+    // std::cout << "\t get last element -> " << *(std::end(vec1).operator--()) << std::endl; // show last element
 
     std::cout << "Numbers for vec1:\n";
     for (int vec11: vec1) {
@@ -81,6 +80,16 @@ int main(int argc, char *argv[]) {
     std::cout << "Бинарная операция " << std::accumulate(vec1.begin(), vec1.end(), 0,
                                                          [](int a, int b)-> int { return b % 2 == 0 ? a + b : a - b; }
     ) << std::endl;
+
+    // Q - как захватывать необходимые внешние переменные
+    // std::cout << "Бинарная операция " << std::accumulate(vec1.begin(), vec1.end(), 0,
+    //                                                      [](int a, int b)-> int { return b % 2 == 0 ? a + b : a - b; } // dont
+    //                                                      [x, &y](int a, int b)-> int { return b % 2 == 0 ? a + b : a - b; } // get x by data
+    //                                                      [&x, y](int a, int b)-> int { return b % 2 == 0 ? a + b : a - b; } // get x by link
+    //                                                      [=](int a, int b)-> int { return b % 2 == 0 ? a + b : a - b; } // get all by data
+    //                                                      [&](int a, int b)-> int { return b % 2 == 0 ? a + b : a - b; } // gte all by link
+    // ) << std::endl;
+
 
     std::cout << "\nNumbers for vec2 > 2 in vec1 > 3:\n";
     for (int vec21: vec2) {
