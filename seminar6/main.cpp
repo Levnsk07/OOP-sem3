@@ -2,5 +2,5 @@
 #include "Sensor.cpp"
 
 int main(int argc, char *argv[]) {
-    Sensor *sen = new Sensor(1, 1, 0);
+    Sensor sen(1, 1, 0);
 }
