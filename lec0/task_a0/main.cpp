@@ -1,5 +1,5 @@
-#include "module1.h"
-#include "module2.h"
+#include "lib_module1/module1.h"
+#include "lib_module2/module2.h"
 #include <iostream>
 
 int main(int argc, char** argv)
