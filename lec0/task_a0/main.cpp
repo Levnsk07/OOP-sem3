@@ -2,6 +2,13 @@
 #include "lib_module2/module2.h"
 #include <iostream>
 
+
+namespace newOne {
+    std::string getMyName() {
+        return "Peter";
+    }
+}
+
 int main(int argc, char** argv)
 {
     std::cout <<  "Hello world!" << "\n";
