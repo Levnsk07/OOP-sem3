@@ -15,14 +15,6 @@ target_link_libraries(WordProcessor PRIVATE my_add_lib)
 if(BUILD_TESTS)
 
     message(STATUS "Сборка тестов включена")
-
-    include(FetchContent)
-    FetchContent_Declare(
-            googletest
-            URL https://github.com/google/googletest/archive/refs/heads/main.zip
-    )
-    FetchContent_MakeAvailable(googletest)
-
     enable_testing()
     add_subdirectory(test)
 
