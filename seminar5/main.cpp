@@ -1,9 +1,9 @@
 
 #include <iostream>
-#include "Add.h"
-// #include "addLib/Add.h"
+// #include "Add.h"
+#include "addLib/Add.h"
 
 int main(int argc, char *argv[]) {
-    std::cout << add(10,20) << std::endl;
+    std::cout << Add::addTemplate<int>(10,20) << std::endl;
 
 }

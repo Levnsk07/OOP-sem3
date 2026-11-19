@@ -1,9 +1,29 @@
-cmake_minimum_required(VERSION 3.12)
-project(Main LANGUAGES CXX)
+cmake_minimum_required(VERSION 3.15)
+project(WordProcessor CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+add_subdirectory(addLib)
+
+add_executable(WordProcessor main.cpp)
+
+target_link_libraries(WordProcessor PRIVATE my_add_lib)
 
 
-add_subdirectory(addLib)  # add Lib
+#==============
+if(BUILD_TESTS)
 
-add_executable(main_app main.cpp) # make main file
+    message(STATUS "Сборка тестов включена")
 
-target_link_libraries(main_app PRIVATE my_add_lib) # link librale
+    include(FetchContent)
+    FetchContent_Declare(
+            googletest
+            URL https://github.com/google/googletest/archive/refs/heads/main.zip
+    )
+    FetchContent_MakeAvailable(googletest)
+
+    enable_testing()
+    add_subdirectory(test)
+
+endif ()

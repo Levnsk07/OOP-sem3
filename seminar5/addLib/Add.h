@@ -5,10 +5,6 @@
 #ifndef CPP_ADD_H
 #define CPP_ADD_H
 
-
-int add(int a, int b);
-int randomAdd(int a, int b);
-
 namespace Add {
     // AddTamplate.cpp
     template<typename T>
@@ -17,6 +13,12 @@ namespace Add {
     }
 }
 
+namespace Wrong {
+    template<typename T>
+    T addTemplate(T a, T b) {
+        return a;
+    }
+}
 
 #include <random>
 namespace randAdd {
